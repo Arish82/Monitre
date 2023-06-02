@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap');
+
+body {
+    background-color: #99BAFF;
+    overflow: hidden;
+}
+
+.main-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height:100vh;
+}
+
+.sub-container {
+    background-color: white;
+    width: 180vh;
+    height: 80vh;
+    display: flex;
+    flex-direction: row;
+    box-shadow: 0 3px 10px rgba(17, 17, 17, 0.5);
+
+}
+
+.img-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width:100vh;
+    height:100%;
+}
+
+.image {
+    height: 30rem;
+    width: 30rem;
+}
+
+.main-form-container{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #0a389a;
+    width:100vh;
+}
+
+.form-heading{
+    font-size: 2rem;
+    font-weight: bold;
+    color: whitesmoke;
+    margin-bottom: 2rem;
+    font-family: 'Roboto Slab', serif;
+}
+
+.form-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.form-container>input{
+    outline-width: 0;
+    border: 0px;
+}
+
+.input-container{
+    background-color: #0a389a;
+    font-size: 1.4rem;
+    margin-bottom: 2rem;
+    overflow: hidden;
+    height:3rem;
+    width:50vh;
+    padding-left: 1rem;
+    border-radius: 1rem;
+    color: whitesmoke;
+    box-shadow:inset 0 1px 4px whitesmoke;
+
+}
+
+.input-container::placeholder{
+    color: whitesmoke;
+    font-size: 1.2rem;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.submit{
+    height:3rem;
+    width:10rem;
+    font-size: 1.5rem;
+    border-radius: 2rem;
+    background-color: #c6d5f5;
+    border: #99BAFF;
+    cursor: pointer;
+    font-family: 'Roboto Slab', serif;
+}
+.submit:hover{
+    background-color: rgb(255, 255, 255);
+}
+
+.direct-login{
+    font-size: 1.5rem;
+    color: whitesmoke;
+    margin-top: 2rem;
+    font-family: 'Roboto Slab', serif;
+}
+
+.direct-login-button{
+    color: whitesmoke;
+    font-weight: bold;
+}
