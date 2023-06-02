@@ -26,10 +26,12 @@ router.post("/signup",async (req,res)=>{
         }
 
         res.status(500).json({message: "Server failure"});
-        
+
     }catch(err){
         console.log(err);
     }
 })
+
+
 
 module.exports= router;
