@@ -3,7 +3,7 @@ const app=express();
 
 // env setup
 const dotenv=require("dotenv")
-dotenv.config({path: './config.env'})
+dotenv.config({path: './.env'})
 const PORT=process.env.PORT;
 
 app.use(express.json());
