@@ -5,10 +5,10 @@ require("../db/conn")
 const bcrypt = require('bcryptjs');
 const jwt=require('jsonwebtoken');
 
-router.post("/signup",async (req,res)=>{
+router.post("/register",async (req,res)=>{
     console.log(req.body);
-    const {name, email, phone, password, cPassword}=req.body;
-    if(!name || !email || !phone || !password || !cPassword){
+    const {name, email, phone, password}=req.body;
+    if(!name || !email || !phone || !password){
         return res.status(422).json({message: "Make sure that the data sent in the request contains all valid fields and values beforehand."})
     }
     try{
@@ -16,11 +16,8 @@ router.post("/signup",async (req,res)=>{
         if(userExist){
             return res.status(422).json({message: "User already exists."})
         }
-        else if(cPassword!=password){
-            return res.status(422).json({message: "Password and confirm passwords are not same."})
-        }
 
-        const newUser= new User({name, email, phone, password, cPassword});
+        const newUser= new User({name, email, phone, password});
         const created=await newUser.save();
 
         if(created){
@@ -42,13 +39,13 @@ router.post("/login",async (req,res)=>{
     try{
         const userExist=await User.findOne({email});
         if(!userExist){
-            return res.status(401).json({message: "Invalid Credentials"});
+            return res.status(400).json({message: "Invalid Credentials"});
         }
         
         const match=await bcrypt.compare(password, userExist.password);
         
         if(!match){
-            return res.status(401).json({message: "Invalid Credentials"});
+            return res.status(400).json({message: "Invalid Credentials"});
         }
 
         const token=await userExist.generateWebToken();
