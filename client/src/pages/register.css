@@ -10,7 +10,7 @@ body {
 }
 
 .main-container {
-    background-color: #252954;
+    background-color: #0E0E23;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -45,7 +45,7 @@ body {
     align-items: center;
     flex-direction: column;
     justify-content: center;
-    background-color: #0E0E23;
+    background-color: #252954;
     width:100vh;
 }
 
@@ -70,7 +70,7 @@ body {
 }
 
 .input-container{
-    background-color: #0E0E23;
+    background-color: #252954;
     font-size: 1.4rem;
     margin-bottom: 2rem;
     overflow: hidden;
@@ -130,7 +130,7 @@ input::-webkit-inner-spin-button {
     width:8rem;
     font-size:1.4rem;
     margin-bottom: 2rem;
-    background-color: #0E0E23;
+    background-color: #252954;
     font-size: 1.4rem;
     margin-bottom: 2rem;
     overflow: hidden;
