@@ -15,14 +15,7 @@ const UserSchema=new mongoose.Schema({
         type: String,
         require: true
     },
-    image: {
-        type: String
-    },
     password: {
-        type: String,
-        require: true
-    },
-    cPassword: {
         type: String,
         require: true
     },
@@ -40,7 +33,6 @@ UserSchema.pre('save', function(next){
     if(this.isModified('password')){
         var salt = bcrypt.genSaltSync(12);
         this.password = bcrypt.hashSync(this.password,salt);
-        this.cPassword = bcrypt.hashSync(this.cPassword,salt);
     }
     next();
 })
