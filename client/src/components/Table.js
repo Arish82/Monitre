@@ -1,9 +1,10 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 export default function Table() {
     return (
         <>
-            <div className="cards-wrapper" style={{"--delay": "1s"}}>
+            <div className="cards-wrapper" style={{ "--delay": "1s" }}>
                 <div className="cards-header">
                     <h2 className="cards-view">
                         Transactions
@@ -17,12 +18,13 @@ export default function Table() {
                             <path d="M9 18l6-6-6-6" />
                         </svg>
                     </div>
-                    <div className="cards-button button">
+                    <Link to="/transaction-form"> <div className="cards-button button">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" className="feather feather-plus">
                             <path d="M12 5v14M5 12h14" />
                         </svg>
                         Create
                     </div>
+                    </Link>
                 </div>
                 <div className="cards card">
                     <table className="table">
@@ -38,15 +40,15 @@ export default function Table() {
                         <tbody>
                             <tr>
                                 <td>
-                                Home Rent</td>
+                                    Home Rent</td>
                                 <td>17:04</td>
                                 <td>28 Feb</td>
                                 <td>28 Feb</td>
                                 <td>
                                     <div className="status is-green">
-                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" className="feather feather-plus">
-                                        <path d="M12 5v14M5 12h14" />
-                                    </svg>
+                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" className="feather feather-plus">
+                                            <path d="M12 5v14M5 12h14" />
+                                        </svg>
                                         $ 300
                                     </div>
                                 </td>

@@ -10,7 +10,7 @@ body {
 }
 
 .main-container {
-    background-color: #99BAFF;
+    background-color: #252954;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -45,7 +45,7 @@ body {
     align-items: center;
     flex-direction: column;
     justify-content: center;
-    background-color: #0a389a;
+    background-color: #0E0E23;
     width:100vh;
 }
 
@@ -70,7 +70,7 @@ body {
 }
 
 .input-container{
-    background-color: #0a389a;
+    background-color: #0E0E23;
     font-size: 1.4rem;
     margin-bottom: 2rem;
     overflow: hidden;
@@ -118,4 +118,27 @@ input::-webkit-inner-spin-button {
 .direct-login-button{
     color: whitesmoke;
     font-weight: bold;
+}
+
+.image-transaction {
+    height: 25rem;
+    width: 40rem;
+}
+
+.wallet-type-select{
+    height:2rem;
+    width:8rem;
+    font-size:1.4rem;
+    margin-bottom: 2rem;
+    background-color: #0E0E23;
+    font-size: 1.4rem;
+    margin-bottom: 2rem;
+    overflow: hidden;
+    height:3rem;
+    width:10rem;
+    padding-left: 1rem;
+    border-radius: 1rem;
+    color: whitesmoke;
+    box-shadow:inset 0 1px 4px whitesmoke;
+    outline:none;
 }
