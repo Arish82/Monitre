@@ -43,6 +43,8 @@ body {
     color: $body-color;
 }
 
+
+
 .wrapper {
     max-width: 1600px;
     background-color: $main-bg;
@@ -67,14 +69,6 @@ body {
         svg{
             margin-top: 34px;
             color: #9b9ca7;
-            
-            // &+svg {
-            // }
-    
-            // &:last-child {
-            //     margin-top: auto;
-            // }
-    
             &.active,
             &:hover {
                 color: #4255d4;

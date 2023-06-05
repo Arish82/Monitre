@@ -1,0 +1,45 @@
+.transaction-form{
+    width: 100%;
+    margin-top: 25px;
+    & .transaction-card{
+        width: min(80%, 550px);
+        margin: auto;
+        // min-height: 70vh;
+        padding-bottom: 2em;
+        // display: flex;
+        flex-direction: column;
+        align-items: center;
+        // border: 2px solid red;
+        background: rgb(26, 32, 73);
+        background: radial-gradient(circle,
+                rgba(26, 32, 73, 1) 0%,
+                rgba(19, 22, 47, 1) 100%);
+        padding: 60px 70px;
+        border-radius: 6px;
+        & .title{
+            text-align: center;
+            font-size: 2em;
+            font-weight: 800;
+            // width: 80%;
+        }
+        & .transaction-form-card{
+            // width: 80%;
+            margin-top: 1em;
+            display: flex;
+            flex-direction: column;
+            gap: 1.2em;
+            & .input-fields{
+                // font-weight: 600;
+                color: #e7e8ea;
+                border: none;
+                font-size: 1em;
+                padding: 1em;
+                border-radius: 5px;
+                background-color: #10122b;
+            }
+            & .offer-button{
+                font-size: 1em;
+            }
+        }
+    }
+}

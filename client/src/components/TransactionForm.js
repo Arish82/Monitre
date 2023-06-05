@@ -2,57 +2,67 @@ import React from 'react'
 import { useNavigate } from 'react-router-dom'
 import transaction from '../assets/transaction.jpg'
 import '../pages/register.css'
+import Header from './Header'
+import ActivityCard from "./ActivityCard"
+import "../assets/scss/trasaction.scss"
 
 const TransactionForm = () => {
 
-    const navigate=useNavigate();
+    const navigate = useNavigate();
 
-    const addTransaction=()=>{
+    const addTransaction = () => {
         window.alert('Transaction recorded successfully')
         navigate('/');
     }
 
     return (
-        < div className = 'main-container' >
-            <div className='sub-container'>
-                <div className='img-container'>
-                    <img src={transaction} alt="transaction" className='image-transaction' />
-                </div>
-                <div className='main-form-container'>
-                    <div className="form-heading">Transaction Details</div>
-                    <form className='form-container' method="POST" autoComplete="off">
-                    <select id="transactionType" class="wallet-type-select">
-                            <option value="true">Deposit</option>
-                            <option value="false">Debit</option>
-                        </select>
-                        <input
-                            type="text"
-                            name="transactionName"
-                            autoComplete='off'
-                            placeholder='Transaction Name'
-                            required
-                            className='input-container'
-                        />
-                        <input
-                            type="type"
-                            name="transactionDescription"
-                            placeholder='Transaction Description'
-                            required
-                            className='input-container'
-                        />
-                        <input
-                            type="text"
-                            name="transactionAmount"
-                            placeholder='Transaction Amount'
-                            required
-                            className='input-container'
-                        />
-                        <button type="submit" className='submit' onClick={addTransaction}>Submit</button>
-                    </form>
+        <>
+            <div className="main-containers"  >
+                <Header />
+                <div className='transaction-form' >
+                    <div class="transaction-card" style={{"--delay": ".4s"}}>
+                        <h1 class="title">Transaction Details</h1>
+                        <form className='transaction-form-card' method="POST" autoComplete="off">
+                            <select id="transactionType" className="input-fields">
+                                
+                                <option value=""></option>
+                                <option value="+">Deposit</option>
+                                <option value="-">Debit</option>
+                            </select>
+                            <input
+                                type="text"
+                                name="transactionName"
+                                autoComplete='off'
+                                placeholder='Category'
+                                required
+                                className='input-fields'
+                            />
+                            <input
+                                type="type"
+                                name="transactionDescription"
+                                placeholder='Description'
+                                required
+                                className='input-fields'
+                            />
+                            <input
+                                type="text"
+                                name="transactionAmount"
+                                placeholder='Amount'
+                                required
+                                className='input-fields'
+                            />
+                            <button type="submit" className='button offer-button' onClick={addTransaction}>
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" className="feather feather-plus">
+                                    <path d="M12 5v14M5 12h14" />
+                                </svg> Add
+                            </button>
+                        </form>
+                        
+                    </div>
                 </div>
             </div>
-    </div >
-  )
+        </>
+    )
 }
 
 export default TransactionForm

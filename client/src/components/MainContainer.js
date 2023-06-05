@@ -1,11 +1,11 @@
 import React from 'react'
 import Header from './Header'
 import Expenses from './Expenses'
-// import ActivityCard from '../../../temp/ActivityCard'
-// import CardWrapper from './CardWrapper'
 import AccountWrapper from './AccountWrapper'
 import Table from './Table'
 import Transection from './Transection'
+// import ActivityCard from './ActivityCard'
+
 
 export default function MainContainer() {
   return (
@@ -18,6 +18,7 @@ export default function MainContainer() {
                   <AccountWrapper/>
                   <Expenses/>
                   <Transection/>
+                  {/* <ActivityCard/> */}
               </div>
               <div className="user-box second-box second-row">
                   <Table/>
