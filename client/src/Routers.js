@@ -6,6 +6,7 @@ import Login from './pages/Login';
 import Home from './pages/HomePage/Home';
 import TransactionForm from './components/TransactionForm';
 import LeftSidebar from './components/LeftSidebar';
+import LandingPage from './pages/LandingPage/LandingPage';
 
 const Routers = () => {
   return (
@@ -16,6 +17,7 @@ const Routers = () => {
             <Route index element={<Home />} />
             <Route path='/register' element={<Register />} />
             <Route path='/login' element={<Login />} />
+            <Route path='/masthead' element={<LandingPage/>}/>
             <Route path='/transaction-form' element={<TransactionForm/>}/>
         </Routes>
       </div>
