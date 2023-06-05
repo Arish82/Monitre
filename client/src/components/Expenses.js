@@ -16,8 +16,7 @@ export default function Expenses() {
                         <div className="circle">
                             <div className="pie">
                                 <svg>
-                                    <circle cx="60" cy="60" r="50">
-                                        
+                                    <circle cx="60" cy="60" r="50">   
                                     </circle>
                                 </svg>
                             </div>

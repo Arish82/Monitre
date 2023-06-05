@@ -18,7 +18,7 @@ export default function AccountWrapper() {
                     <div className="account-title">{Work}</div>
                 </div>
                 <div className="account card">
-                    <div className="account-cash">$ 5637.04</div>
+                    <div className="account-cash is-green">$ 5637.04</div>
                     <div className="account-income">Total Income</div>
                     <div className="account-iban">**** **** **** 3060</div>
                 </div>

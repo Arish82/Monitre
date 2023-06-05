@@ -17,7 +17,9 @@ $main-bg: #0e0e23;
 .is-remain {
     color: #b7c23e !important;
 }
-
+.is-green{
+    color: #1a9d81;
+}
 body {
     background-color: $bg-color !important;
 }
@@ -59,21 +61,24 @@ body {
     padding: 117px 0 40px;
     animation: left 1s var(--delay) both;
 
-    svg {
+    .menu-svg {
         width: 24px;
         cursor: pointer;
-
-        &+svg {
+        svg{
             margin-top: 34px;
-        }
-
-        &:last-child {
-            margin-top: auto;
-        }
-
-        &.active,
-        &:hover {
-            color: #4255d4;
+            color: #9b9ca7;
+            
+            // &+svg {
+            // }
+    
+            // &:last-child {
+            //     margin-top: auto;
+            // }
+    
+            &.active,
+            &:hover {
+                color: #4255d4;
+            }
         }
     }
 }
