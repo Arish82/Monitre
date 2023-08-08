@@ -25,10 +25,10 @@ const TransactionForm = (props) => {
         <>
             <div className="main-containers"  >
                 <Header />
-                <div className='transaction-form' >
-                    <div className="transaction-card" style={{"--delay": ".4s"}}>
+                <div className='transaction-form' style={{"--delay": "1s"}} >
+                    <div className="transaction-card">
                         <h1 className="title">Transaction Details</h1>
-                        <form className='transaction-form-card' method="POST" autoComplete="off" onS>
+                        <form className='transaction-form-card' method="POST" autoComplete="off">
                             <select id="transactionType" className="input-fields" value={data.type} onChange={e=> setdata({...data,type: e.target.value}) } >
                                 
                                 <option value=""></option>

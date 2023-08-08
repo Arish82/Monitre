@@ -1,7 +1,8 @@
 import React from 'react'
-import UserProfileImage from "../assets/Hamshita.png"
+// import UserProfileImage from "../assets/Hamshita.png"
 
 export default function AccountWrapper() {
+    const UserProfileImage="https://avatars.githubusercontent.com/u/135334561?s=400&u=7088229ce5b9d861ba84ae5c5f9f3ab8a29bcdaa&v=4";
     let UserName="Hamshita";
     let Work="SDE Intern";
     return (
