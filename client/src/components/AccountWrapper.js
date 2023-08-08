@@ -1,8 +1,8 @@
 import React from 'react'
-import UserProfileImage from "../assets/Hamshita.png"
+import UserProfileImage from "../assets/images.jpeg"
 
 export default function AccountWrapper() {
-    let UserName="Hamshita";
+    let UserName="User";
     let Work="SDE Intern";
     return (
         <>
