@@ -1,12 +1,11 @@
-import React from 'react'
-import App from './App';
+import React, { useState } from 'react'
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Register from './pages/Register';
-import Login from './pages/Login';
+import Login from './pages/LoginPage/Login';
 import Home from './pages/HomePage/Home';
 import TransactionForm from './components/TransactionForm';
 import LeftSidebar from './components/LeftSidebar';
 import LandingPage from './pages/LandingPage/LandingPage';
+import Registration from './pages/Registration/Registration';
 
 const Routers = () => {
   return (
@@ -15,7 +14,7 @@ const Routers = () => {
         <LeftSidebar/>
         <Routes>
             <Route index element={<Home />} />
-            <Route path='/register' element={<Register />} />
+            <Route path='/register' element={<Registration />} />
             <Route path='/login' element={<Login />} />
             <Route path='/masthead' element={<LandingPage/>}/>
             <Route path='/transaction-form' element={<TransactionForm/>}/>

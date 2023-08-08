@@ -1,0 +1,8 @@
+{
+    "files.associations": {
+        "*.html": "html",
+        "*.js": "javascriptreact",
+        "unordered_set": "cpp",
+        "xtree": "cpp"
+    }
+}

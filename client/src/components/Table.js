@@ -2,6 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 
 export default function Table() {
+    
     return (
         <>
             <div className="cards-wrapper" style={{ "--delay": "1s" }}>

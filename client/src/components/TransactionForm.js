@@ -1,18 +1,24 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
-import transaction from '../assets/transaction.jpg'
-import '../pages/register.css'
+import '../pages/Registration/register.css'
 import Header from './Header'
-import ActivityCard from "./ActivityCard"
 import "../assets/scss/trasaction.scss"
 
-const TransactionForm = () => {
-
+const TransactionForm = (props) => {
+    const [data, setdata] = useState({
+        type: "",
+        category: "",
+        description: "",
+        amount: ""
+    })
+    console.log(data);
     const navigate = useNavigate();
 
-    const addTransaction = () => {
-        window.alert('Transaction recorded successfully')
-        navigate('/');
+    const addTransaction = (e) => {
+        e.preventDefault();
+        
+        // window.alert('Transaction recorded successfully')
+        // navigate('/');
     }
 
     return (
@@ -20,14 +26,14 @@ const TransactionForm = () => {
             <div className="main-containers"  >
                 <Header />
                 <div className='transaction-form' >
-                    <div class="transaction-card" style={{"--delay": ".4s"}}>
-                        <h1 class="title">Transaction Details</h1>
-                        <form className='transaction-form-card' method="POST" autoComplete="off">
-                            <select id="transactionType" className="input-fields">
+                    <div className="transaction-card" style={{"--delay": ".4s"}}>
+                        <h1 className="title">Transaction Details</h1>
+                        <form className='transaction-form-card' method="POST" autoComplete="off" onS>
+                            <select id="transactionType" className="input-fields" value={data.type} onChange={e=> setdata({...data,type: e.target.value}) } >
                                 
                                 <option value=""></option>
-                                <option value="+">Deposit</option>
-                                <option value="-">Debit</option>
+                                <option value="Deposit">Deposit</option>
+                                <option value="Debit">Debit</option>
                             </select>
                             <input
                                 type="text"
@@ -36,6 +42,8 @@ const TransactionForm = () => {
                                 placeholder='Category'
                                 required
                                 className='input-fields'
+                                value={data.category}
+                                onChange={e=>setdata({...data, category: e.target.value})}
                             />
                             <input
                                 type="type"
@@ -43,6 +51,8 @@ const TransactionForm = () => {
                                 placeholder='Description'
                                 required
                                 className='input-fields'
+                                value={data.description}
+                                onChange={e=>setdata({...data, description: e.target.value})}
                             />
                             <input
                                 type="text"
@@ -50,9 +60,11 @@ const TransactionForm = () => {
                                 placeholder='Amount'
                                 required
                                 className='input-fields'
+                                value={data.amount}
+                                onChange={e=>setdata({...data, amount: e.target.value})}
                             />
                             <button type="submit" className='button offer-button' onClick={addTransaction}>
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" className="feather feather-plus">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="feather feather-plus">
                                     <path d="M12 5v14M5 12h14" />
                                 </svg> Add
                             </button>
